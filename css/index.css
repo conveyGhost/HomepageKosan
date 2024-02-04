@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'Noto Sans';
+    font-display: swap;
+    src: url('/fonts/noto-sans-v35-latin-regular.woff2');
+}
+
+:root {
+    --view-size: 1440;
+}
+
+html {
+    /* font-size: calc(calc(100/var(--view-size))*16*1vw); */
+    font-size: calc(100vw/1440);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+.h4 {
+    font-size: 24rem;
+}
+
+.h5 {
+    font-size: 19.41rem;
+    color: #1BADFF;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100rem;
+}
+
+.header_left {
+    display: flex;
+}
+
+.header_left .logo_brand {
+    width: 270rem;
+    height: 90rem;
+    margin: 5rem 0 5rem 8rem;
+}
+
+.header_left .logo_ttl {
+    margin: auto;
+}
+
+
+.header_right {
+    display: flex;
+}
+
+.header_right .menu_hamburger_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64rem;
+    height: 64rem;
+    margin: 18rem 26rem 18rem 37rem;
+    border-radius: 50%;
+    background-color: #1BADFF;
+}
+
+.header_right .menu_hamburger_ttl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 189rem;
+    height: 31rem;
+    margin: auto;
+    border: 1rem solid #A1B4C9;
+}
+
+.header_right .menu_hamburger_ttl p {
+    font-size: 14rem;
+    color: #A1B4C9;
+}
+
+
+
+/* Hamburger Button */
+.menu_hamburger_btn .line{
+    width: 32rem;
+    height: 1.64rem;
+    background-color: #FFFFFF;
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_hamburger_btn .middle{
+    margin: 10.67rem auto;
+}
+
+.menu_hamburger_btn:hover{
+    cursor: pointer;
+}
+
+.menu_hamburger_btn .is-active{
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+.menu_hamburger_btn.is-active .line:nth-child(2){
+    width: 0px;
+}
+  
+.menu_hamburger_btn.is-active .line:nth-child(1),
+.menu_hamburger_btn.is-active .line:nth-child(3){
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+  
+.menu_hamburger_btn.is-active .line:nth-child(1){
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+  
+.menu_hamburger_btn.is-active .line:nth-child(3){
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
+.top_fv_img {
+    width: 100%;
+    height: 760rem;
+}
+
+.top_fv_wrapper {
+    position: relative;
+}
+
+.scrollText {
+    position: absolute;
+    top: 605rem;
+    left: 85rem;
+    color: #fafafa;
+    font-size: 14rem;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    transform: rotate(90deg);
+}
+  
+.scrollGuide {
+    position: absolute;
+    top: 654rem;
+    left: 109rem;
+    height: 53rem;
+}
+
+.scrollGuide i {
+    display: block;
+    width: 2rem;
+    height: 106rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.scrollGuide i:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scrollGuide-animation 2s infinite normal;
+}
+  
+@keyframes scrollGuide-animation {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+    15% {
+      transform: translate3d(0, -98%, 0);
+    }
+    85% {
+      transform: translate3d(0, 98%, 0);
+    }
+    100% {
+      transform: translate3d(0, 100%, 0);
+    }
+}
+
+.top_fv_btn {
+    position: absolute;
+    top: 125rem;
+    right: 0;
+    /* width: 55.29rem; */
+    /* height: 354rem; */
+}
+
+.top_fv_btn .top_fv_entry,
+.top_fv_btn .top_fv_session {
+    width: 100%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #1BADFF;
+}
+
+.top_fv_btn .top_fv_entry {
+    width: 55.29rem;
+    height: 177rem;
+    margin-bottom: 1rem;
+    border-top-left-radius: 12rem;
+}
+
+.top_fv_btn .top_fv_session {
+    height: 176rem;
+    border-bottom-left-radius: 12rem;
+}
+
+.top_fv_btn .top_fv_entry,
+.top_fv_btn .top_fv_session {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_fv_btn .top_fv_entry a,
+.top_fv_btn .top_fv_session a {
+    font-size: 16rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.top_fv_btn .top_fv_entry .arrow {
+    font-weight: bold ;
+}
+
+.top_about_wrapper {
+    display: flex;
+}
+
+.top_about_intro img {
+    width: 470rem;
+    height: 128rem;
+    margin-left: 77rem;
+    margin-top: 140rem;
+}
+
+.top_about_title {
+    margin-top: 48rem;
+    margin-left: 92rem;
+} 
+
+.top_about_content {
+    margin-top: 23rem;
+    font-size: 16rem;
+}
+
+.top_about_more {
+    display: flex;
+    justify-content: space-between;
+    width: 142rem;
+    height: 54rem;
+    margin-top: 25rem;
+}
+
+.top_about_more h5 {
+    margin: auto;
+}
+
+.top_about_more .arrow_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 53.37rem;
+    height: 53.37rem;
+    background-color: #1BADFF;
+    border-radius: 50%;
+}
+
+.top_about_more .arrow {
+    font-size: 28rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.top_about_img {
+    position: relative;
+    width: 100%;
+    margin-left: -91rem;
+}
+
+.top_about_img .cloud {
+    position: absolute;
+    width: 907.69rem;
+    height: 532.05rem;
+}
+
+.top_about_img .building {
+    position: absolute;
+    top: 107rem;
+    width: 1269.5rem;
+    height: 570rem;
+}
