@@ -8,7 +8,7 @@ $(document).ready(function(){
         
         $(this).css({
           'opacity': '0',
-          'animation': `all 0.4s ease-in-out`
+          'animation': `all .4s ease-in-out`
         });
         // Apply the animation with delay based on the index
         setTimeout(() => {
